@@ -1,0 +1,18 @@
+
+<div class="container">
+    <div class="box">
+        <h2>Register</h2>
+    <div class="Uname">
+    <mat-form-field appearance="outline" (ngSubmit)="onSubmit()" >
+        <input matInput placeholder="User Name" [(ngModel)]="user.username">
+        <mat-icon matSuffix>hive</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="Pass">
+    <mat-form-field appearance="outline">
+        <input matInput placeholder="Password" [(ngModel)]="user.password">
+        <mat-icon matSuffix>hive</mat-icon>
+      </mat-form-field>
+    </div>
+    <button type="submit" >Enter</button>
+</div>
