@@ -10,7 +10,7 @@ export class MessageService {
 
   async submitMessage(message: string) {
     try{
-      await axios.post('https://localhost:7117/api/Message/SubmitMessages', { message});
+      await axios.post('https://localhost:7117/api/Message/SubmitMessage', { message});
       console.log('Message sent');
     }
     catch(e){

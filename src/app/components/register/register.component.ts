@@ -5,6 +5,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 //import Forms module
 import { FormsModule } from '@angular/forms';
+import { UserService } from '../../../services/user.service';
 
 
 interface User{
@@ -23,8 +24,19 @@ export class RegisterComponent {
 
 user : User ={} as User;
 
-onSubmit() {
-throw new Error('Method not implemented.');
+constructor( 
+  private userService: UserService,
+
+) { }
+
+async onSubmit() {
+  try{
+  await this.userService.createUser(this.user);
+  console.log('User created');
+  }
+  catch(e){
+    console.log(e);
+  }
 }
 
 }
